@@ -1,4 +1,4 @@
-class TelegramController < ActionController::API
+class Api::TelegramController < ActionController::API
   def hook
     Rails.logger.info params[:message]
     render json: {ok: true}, status: 200
