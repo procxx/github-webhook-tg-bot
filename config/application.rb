@@ -31,6 +31,9 @@ module GithubWebhookTgBot
       g.skip_routes true
     end
 
+    # TODO: fix this
+    routes.default_url_options = { host: 'ancient-crag-67954.herokuapp.com', protocol: 'https' }
+
     # config.autoload_paths += %W(#{config.root}/lib)
     config.eager_load_paths += %W(#{config.root}/lib)
   end
