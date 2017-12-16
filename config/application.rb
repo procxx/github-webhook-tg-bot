@@ -30,5 +30,8 @@ module GithubWebhookTgBot
       g.helper false
       g.skip_routes true
     end
+
+    # config.autoload_paths += %W(#{config.root}/lib)
+    config.eager_load_paths += %W(#{config.root}/lib)
   end
 end
