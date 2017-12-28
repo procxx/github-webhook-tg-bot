@@ -13,6 +13,11 @@ class Telegram::Api
     end
   end
 
+  def send_message(params)
+    _make_request('sendMessage', {parse_mode: 'Markdown'}.merge!(params))
+    # _make_request('sendMessage', params)
+  end
+
   private
   def _make_request(action, params={})
     HTTP.post(_make_url(action), params: params)
